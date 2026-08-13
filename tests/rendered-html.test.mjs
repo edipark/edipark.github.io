@@ -1,26 +1,16 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
+test("static export contains the academic portfolio", async () => {
+  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
 
-  return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
-}
-
-test("server-renders the portfolio", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  const html = await response.text();
-  assert.match(html, /Sunghyun Park — Designer &amp; Developer/);
+  assert.match(html, /Sunghyun Park — Robotics/);
   assert.match(html, /Selected Projects/);
-  assert.match(html, /Research Interface/);
-  assert.match(html, /Personal Knowledge System/);
-  assert.match(html, /Spatial Notes/);
-  assert.doesNotMatch(html, /codex-preview|SkeletonPreview/);
+  assert.match(html, /University Mobile Management Agent/);
+  assert.match(html, /State Estimation with Only Leg Observation/);
+  assert.match(html, /A Robotic Hand/);
+  assert.match(html, /A Low-Cost Humanoid/);
+  assert.match(html, /Machine Learning and Control Systems Laboratory/);
+  assert.doesNotMatch(html, /Designer &amp; Developer|hello@example|Research Interface/);
 });
