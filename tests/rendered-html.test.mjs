@@ -17,7 +17,7 @@ test("server-renders the portfolio", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Edward Park — Designer &amp; Developer/);
+  assert.match(html, /Sunghyun Park — Designer &amp; Developer/);
   assert.match(html, /Selected Projects/);
   assert.match(html, /Research Interface/);
   assert.match(html, /Personal Knowledge System/);

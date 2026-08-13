@@ -41,8 +41,8 @@ export default function Home() {
   return (
     <main>
       <header className="site-header page-shell">
-        <a className="wordmark" href="#top" aria-label="Edward Park, home">
-          Edward Park<span className="wordmark-dot">.</span>
+        <a className="wordmark" href="#top" aria-label="Sunghyun Park, home">
+          Sunghyun Park<span className="wordmark-dot">.</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
@@ -61,7 +61,7 @@ export default function Home() {
         </h1>
         <div className="hero-bottom" id="about">
           <p>
-            I’m Edward, a designer and developer interested in the space between
+            I’m Sunghyun, a designer and developer interested in the space between
             technology, people, and everyday life. I make useful things with care.
           </p>
           <div className="hero-links">
@@ -141,7 +141,7 @@ export default function Home() {
           <a href="mailto:hello@example.com">Let’s talk ↗</a>
         </div>
         <div className="footer-meta">
-          <span>© 2026 Edward Park</span>
+          <span>© 2026 Sunghyun Park</span>
           <a href="#top">Back to top ↑</a>
         </div>
       </footer>
