@@ -1,9 +1,55 @@
-const projects = [
+type Media =
+  | { type: "image"; src: string; alt: string }
+  | { type: "video"; src: string; title: string; poster?: string }
+  | { type: "youtube"; id: string; title: string };
+
+function MediaPreview({ media }: { media: Media }) {
+  if (media.type === "youtube") {
+    return (
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${media.id}?autoplay=1&mute=1&loop=1&playlist=${media.id}&controls=0&modestbranding=1&playsinline=1&rel=0`}
+        title={media.title}
+        loading="lazy"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  if (media.type === "video") {
+    return (
+      <video
+        src={media.src}
+        poster={media.poster}
+        aria-label={media.title}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    );
+  }
+
+  return <img src={media.src} alt={media.alt} />;
+}
+
+const projects: Array<{
+  title: string;
+  period: string;
+  media: Media;
+  description: string;
+  tags: string[];
+  links: Array<{ label: string; href: string }>;
+}> = [
   {
     title: "UMMA: University Mobile Management Agent",
     period: "Mar. 2026 - Jun. 2026",
-    image: "/images/umma.jpg",
-    imageAlt: "UMMA autonomous mobile management robot",
+    media: {
+      type: "youtube",
+      id: "lkpkr6ZK67k",
+      title: "UMMA project demonstration",
+    },
     description:
       "An autonomous building management robot integrating mobile manipulation, perception, and navigation.",
     tags: ["ROS 2", "YOLO", "SLAM", "Hardware Design"],
@@ -12,8 +58,11 @@ const projects = [
   {
     title: "SOLO: State Estimation with Only Leg Observation",
     period: "Dec. 2025 - Apr. 2026",
-    image: "/images/solo.jpg",
-    imageAlt: "SOLO DEXTRA GitHub project cover",
+    media: {
+      type: "image",
+      src: "/images/solo.jpg",
+      alt: "SOLO DEXTRA GitHub project cover",
+    },
     description:
       "An IMU-free state estimator for bipedal locomotion using only the history of leg observations.",
     tags: ["Locomotion", "State Estimation", "Reinforcement Learning"],
@@ -25,8 +74,11 @@ const projects = [
   {
     title: "PALMA: A Robotic Hand",
     period: "Dec. 2025 - Feb. 2026",
-    image: "/images/palma.jpg",
-    imageAlt: "PALMA robotic hand following a human hand",
+    media: {
+      type: "youtube",
+      id: "w6RC1MFLB20",
+      title: "PALMA robotic hand teleoperation demonstration",
+    },
     description:
       "A tendon-actuated robotic hand built from scratch with vision-based teleoperation.",
     tags: ["Computer Vision", "Teleoperation", "Tendon Actuation"],
@@ -38,8 +90,11 @@ const projects = [
   {
     title: "DEXTRA: A Low-Cost Humanoid",
     period: "Aug. 2025 - Jan. 2026",
-    image: "/images/dextra.jpg",
-    imageAlt: "DEXTRA motion imitation GitHub project cover",
+    media: {
+      type: "image",
+      src: "/images/dextra.jpg",
+      alt: "DEXTRA motion imitation GitHub project cover",
+    },
     description:
       "A low-cost humanoid designed, fabricated, and trained for bipedal walking through motion imitation.",
     tags: ["Humanoid", "Motion Retargeting", "Isaac Gym"],
@@ -122,8 +177,8 @@ export default function Home() {
         <div className="project-list">
           {projects.map((project) => (
             <article className="project-item" key={project.title}>
-              <div className="project-image-wrap">
-                <img src={project.image} alt={project.imageAlt} />
+              <div className="media-frame">
+                <MediaPreview media={project.media} />
               </div>
               <div className="project-body">
                 <h3>{project.title}</h3>
@@ -144,8 +199,17 @@ export default function Home() {
       <section className="content-section" id="publication" aria-labelledby="publication-title">
         <h2 id="publication-title">Publication & Working Paper</h2>
         <article className="publication-item">
-          <div className="publication-year">2026</div>
-          <div>
+          <div className="media-frame">
+            <MediaPreview
+              media={{
+                type: "image",
+                src: "/images/solo.jpg",
+                alt: "SOLO state estimation project cover",
+              }}
+            />
+          </div>
+          <div className="publication-body">
+            <div className="publication-year">2026</div>
             <h3>SOLO: State Estimation with Only Leg Observation for IMU-Free Bipedal Locomotion</h3>
             <p>Hyeonjung Kim, <strong>Sunghyun Park</strong>, and Hyungjun Jeon</p>
             <p className="venue">Working paper, in preparation.</p>

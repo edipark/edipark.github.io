@@ -13,5 +13,8 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /A Low-Cost Humanoid/);
   assert.match(html, /Machine Learning and Control Systems Laboratory/);
   assert.match(html, /href="\/CurriculumVitae\.pdf"/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/lkpkr6ZK67k/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/w6RC1MFLB20/);
+  assert.match(html, /SOLO state estimation project cover/);
   assert.doesNotMatch(html, /Designer &amp; Developer|hello@example|Research Interface/);
 });
