@@ -67,7 +67,7 @@ export default function Home() {
           <a className="active" href="#home">Home</a>
           <a href="#projects">Projects</a>
           <a href="#publication">Publication</a>
-          <a href="mailto:edi_park@yonsei.ac.kr">Contact</a>
+          <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
         </nav>
       </header>
 
@@ -89,6 +89,7 @@ export default function Home() {
             the Dynamic Robotic Systems Laboratory at Seoul National University.
           </p>
           <div className="profile-links" aria-label="Profile links">
+            <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
             <a href="https://github.com/edipark" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/sunghyun-park-a141bb332/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.youtube.com/@SunghyunPark-l3u" target="_blank" rel="noreferrer">YouTube</a>

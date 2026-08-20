@@ -12,5 +12,6 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /A Robotic Hand/);
   assert.match(html, /A Low-Cost Humanoid/);
   assert.match(html, /Machine Learning and Control Systems Laboratory/);
+  assert.match(html, /href="\/CurriculumVitae\.pdf"/);
   assert.doesNotMatch(html, /Designer &amp; Developer|hello@example|Research Interface/);
 });
