@@ -56,27 +56,11 @@ const projects: Array<{
     links: [{ label: "Project", href: "https://umma-yonsei.github.io/" }],
   },
   {
-    title: "SOLO: State Estimation with Only Leg Observation",
-    period: "Dec. 2025 - Apr. 2026",
-    media: {
-      type: "image",
-      src: "/images/solo.jpg",
-      alt: "SOLO DEXTRA GitHub project cover",
-    },
-    description:
-      "An IMU-free state estimator for bipedal locomotion using only the history of leg observations.",
-    tags: ["Locomotion", "State Estimation", "Reinforcement Learning"],
-    links: [
-      { label: "Code", href: "https://github.com/edipark/SOLO_DEXTRA" },
-      { label: "Repository", href: "https://github.com/edipark/SOLO" },
-    ],
-  },
-  {
     title: "PALMA: A Robotic Hand",
     period: "Dec. 2025 - Feb. 2026",
     media: {
-      type: "youtube",
-      id: "w6RC1MFLB20",
+      type: "image",
+      src: "/images/palma.jpg",
       title: "PALMA robotic hand teleoperation demonstration",
     },
     description:
@@ -91,8 +75,8 @@ const projects: Array<{
     title: "DEXTRA: A Low-Cost Humanoid",
     period: "Aug. 2025 - Jan. 2026",
     media: {
-      type: "image",
-      src: "/images/dextra.jpg",
+      type: "video",
+      src: "/videos/dextra.mp4",
       alt: "DEXTRA motion imitation GitHub project cover",
     },
     description:
@@ -203,14 +187,15 @@ export default function Home() {
             <MediaPreview
               media={{
                 type: "image",
-                src: "/images/solo.jpg",
-                alt: "SOLO state estimation project cover",
+                src: "/images/JOSE_fig.jpg",
+                alt: "JOSE main figure",
               }}
             />
           </div>
           <div className="publication-body">
             <div className="publication-year">2026</div>
-            <h3>SOLO: State Estimation with Only Leg Observation for IMU-Free Bipedal Locomotion</h3>
+            <h3>JOSE: Joint Only State Estimation
+                  for Whole-Body Control without an Inertial Unit</h3>
             <p>Hyeonjung Kim, <strong>Sunghyun Park</strong>, and Hyungjun Jeon</p>
             <p className="venue">Working paper, in preparation.</p>
             <div className="item-links">
