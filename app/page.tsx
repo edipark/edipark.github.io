@@ -61,7 +61,7 @@ const projects: Array<{
     media: {
       type: "image",
       src: "/images/palma.jpg",
-      title: "PALMA robotic hand teleoperation demonstration",
+      alt: "PALMA robotic hand teleoperation demonstration",
     },
     description:
       "A tendon-actuated robotic hand built from scratch with vision-based teleoperation.",
@@ -77,7 +77,7 @@ const projects: Array<{
     media: {
       type: "video",
       src: "/videos/dextra.mp4",
-      alt: "DEXTRA motion imitation GitHub project cover",
+      title: "DEXTRA motion imitation GitHub project cover",
     },
     description:
       "A low-cost humanoid designed, fabricated, and trained for bipedal walking through motion imitation.",
@@ -187,7 +187,7 @@ export default function Home() {
             <MediaPreview
               media={{
                 type: "image",
-                src: "/images/JOSE_fig.jpg",
+                src: "/images/JOSE_fig.png",
                 alt: "JOSE main figure",
               }}
             />
