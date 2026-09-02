@@ -2,22 +2,9 @@ import { ThemeToggle } from "./theme-toggle";
 
 type Media =
   | { type: "image"; src: string; alt: string }
-  | { type: "video"; src: string; title: string; poster?: string }
-  | { type: "youtube"; id: string; title: string };
+  | { type: "video"; src: string; title: string; poster?: string };
 
 function MediaPreview({ media }: { media: Media }) {
-  if (media.type === "youtube") {
-    return (
-      <iframe
-        src={`https://www.youtube-nocookie.com/embed/${media.id}?autoplay=1&mute=1&loop=1&playlist=${media.id}&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0`}
-        title={media.title}
-        loading="lazy"
-        allow="autoplay; encrypted-media"
-        tabIndex={-1}
-      />
-    );
-  }
-
   if (media.type === "video") {
     return (
       <video
@@ -46,8 +33,8 @@ const projects: Array<{
   {
     title: "UMMA: University Mobile Management Agent",
     media: {
-      type: "youtube",
-      id: "lkpkr6ZK67k",
+      type: "video",
+      src: "/videos/umma.mp4",
       title: "UMMA project demonstration",
     },
     description:
@@ -58,8 +45,8 @@ const projects: Array<{
   {
     title: "PALMA: A Robotic Hand",
     media: {
-      type: "youtube",
-      id: "w6RC1MFLB20",
+      type: "video",
+      src: "/videos/palma.mp4",
       title: "PALMA project demonstration",
     },
     description:
