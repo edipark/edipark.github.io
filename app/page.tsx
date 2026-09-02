@@ -61,15 +61,14 @@ const projects: Array<{
     title: "PALMA: A Robotic Hand",
     period: "Dec. 2025 - Feb. 2026",
     media: {
-      type: "image",
-      src: "/images/palma.jpg",
-      alt: "PALMA robotic hand teleoperation demonstration",
+      type: "youtube",
+      id: "w6RC1MFLB20",
+      title: "PALMA project demonstration",
     },
     description:
       "A tendon-actuated robotic hand built from scratch with vision-based teleoperation.",
     tags: ["Computer Vision", "Teleoperation", "Tendon Actuation"],
     links: [
-      { label: "Demo", href: "https://youtube.com/shorts/w6RC1MFLB20" },
       { label: "Code", href: "https://github.com/edipark/PALMA_teleop" },
     ],
   },
@@ -106,8 +105,8 @@ export default function Home() {
         <a className="site-name" href="#home">Sunghyun Park</a>
         <nav aria-label="Main navigation">
           <a className="active" href="#home">Home</a>
-          <a href="#projects">Projects</a>
           <a href="#publication">Publication</a>
+          <a href="#projects">Projects</a>
           <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
           <ThemeToggle />
         </nav>
@@ -119,6 +118,9 @@ export default function Home() {
         </div>
         <div className="intro-copy">
           <h1 id="intro-title">Sunghyun Park</h1>
+          <div className="interest-list name-tags">
+            {interests.map((interest) => <span key={interest}>{interest}</span>)}
+          </div>
           <p className="affiliation">B.E. Student, Mechanical Engineering · Yonsei University</p>
           <p>
             Hi! I am an undergraduate student in Mechanical Engineering at Yonsei University.
@@ -126,8 +128,11 @@ export default function Home() {
             manipulation, and whole-body control.
           </p>
           <p>
-            I am currently an undergraduate researcher at the Machine Learning and Control
-            Systems Laboratory, advised by Prof. Jongeun Choi.
+            I am currently an undergraduate researcher at the{" "}
+            <a href="https://mlcs.yonsei.ac.kr/" target="_blank" rel="noreferrer">
+              Machine Learning and Control Systems Laboratory
+            </a>
+            , advised by Prof. Jongeun Choi.
           </p>
           <div className="profile-links" aria-label="Profile links">
             <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
@@ -140,37 +145,6 @@ export default function Home() {
             <span>Seoul, Korea</span>
             <span>Robotics · Control · AI</span>
           </p>
-        </div>
-      </section>
-
-      <section className="compact-section" aria-labelledby="interest-title">
-        <h2 id="interest-title">Research Interests</h2>
-        <div className="interest-list">
-          {interests.map((interest) => <span key={interest}>{interest}</span>)}
-        </div>
-      </section>
-
-      <section className="content-section" id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Selected Projects</h2>
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project-item" key={project.title}>
-              <div className="media-frame">
-                <MediaPreview media={project.media} />
-              </div>
-              <div className="project-body">
-                <h3>{project.title}</h3>
-                <p className="project-period">{project.period}</p>
-                <p>{project.description}</p>
-                <p className="project-tags">{project.tags.join(" · ")}</p>
-                <div className="item-links">
-                  {project.links.map((link) => (
-                    <a href={link.href} key={link.label} target="_blank" rel="noreferrer">{link.label}</a>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -199,11 +173,35 @@ export default function Home() {
         </article>
       </section>
 
+      <section className="content-section" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Selected Projects</h2>
+        <div className="project-list">
+          {projects.map((project) => (
+            <article className="project-item" key={project.title}>
+              <div className="media-frame">
+                <MediaPreview media={project.media} />
+              </div>
+              <div className="project-body">
+                <h3>{project.title}</h3>
+                <p className="project-period">{project.period}</p>
+                <p>{project.description}</p>
+                <p className="project-tags">{project.tags.join(" · ")}</p>
+                <div className="item-links">
+                  {project.links.map((link) => (
+                    <a href={link.href} key={link.label} target="_blank" rel="noreferrer">{link.label}</a>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="content-section experience" aria-labelledby="experience-title">
         <h2 id="experience-title">Research Experience</h2>
         <div className="experience-item">
           <time>Nov. 2025 - Present</time>
-          <div><h3>Machine Learning and Control Systems Laboratory</h3><p>Undergraduate Researcher · Yonsei University</p></div>
+          <div><h3><a href="https://mlcs.yonsei.ac.kr/" target="_blank" rel="noreferrer">Machine Learning and Control Systems Laboratory</a></h3><p>Undergraduate Researcher · Yonsei University</p></div>
         </div>
         <div className="experience-item">
           <time>Jul. 2025 - Sep. 2025</time>
