@@ -13,6 +13,7 @@
   --tag-text: #45515a;
   --project-tag: #4d5962;
   --footer: #85898e;
+  --divider: #b4b8bc;
 }
 
 * { box-sizing: border-box; }
@@ -43,6 +44,33 @@ nav { display: flex; gap: 24px; font-size: 14px; }
 nav a { color: var(--nav); }
 nav a.active { color: var(--blue); font-weight: 600; }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: -4px 0;
+  padding: 0;
+  border: 1px solid var(--button-line);
+  border-radius: 4px;
+  background: none;
+  color: var(--nav);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--soft); color: var(--text); }
+/* Show the icon of the mode the button switches to. */
+.theme-toggle svg { display: block; }
+.theme-toggle .icon-sun { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
 .intro {
   display: grid;
   grid-template-columns: 190px 1fr;
@@ -58,7 +86,7 @@ nav a.active { color: var(--blue); font-weight: 600; }
 .profile-links a, .item-links a { border: 1px solid var(--button-line); border-radius: 4px; padding: 4px 9px; font-size: 13px; font-weight: 600; line-height: 1.4; }
 .profile-links a:hover, .item-links a:hover { background: var(--soft); text-decoration: none; }
 .contact-line { display: flex; flex-wrap: wrap; gap: 0; margin-top: 17px !important; color: var(--muted); font-size: 13px; }
-.contact-line > *:not(:last-child)::after { content: "|"; margin: 0 8px; color: #b4b8bc; }
+.contact-line > *:not(:last-child)::after { content: "|"; margin: 0 8px; color: var(--divider); }
 
 section { scroll-margin-top: 20px; }
 .compact-section, .content-section { padding-top: 24px; }
@@ -73,9 +101,6 @@ section { scroll-margin-top: 20px; }
 }
 .interest-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .interest-list span { padding: 5px 11px; border-radius: 4px; background: var(--soft); color: var(--tag-text); font-size: 13px; }
-.news ul { margin: 0; padding: 0; list-style: none; }
-.news li { display: grid; grid-template-columns: 100px 1fr; padding: 5px 0; }
-.news time { color: var(--muted); font-size: 13px; }
 
 .content-section { padding-top: 40px; }
 .project-list { display: grid; gap: 5px; }
@@ -107,7 +132,8 @@ section { scroll-margin-top: 20px; }
 footer { display: flex; justify-content: space-between; padding: 23px 0 32px; border-top: 1px solid var(--line); color: var(--footer); font-size: 12px; }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --background: #111315;
     --text: #e7e9eb;
     --muted: #a6abb1;
@@ -119,8 +145,27 @@ footer { display: flex; justify-content: space-between; padding: 23px 0 32px; bo
     --tag-text: #c5ced5;
     --project-tag: #b4c0c9;
     --footer: #92989e;
+    --divider: #5a6067;
   }
 }
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #111315;
+  --text: #e7e9eb;
+  --muted: #a6abb1;
+  --blue: #72b7ef;
+  --line: #30353a;
+  --soft: #1b1f23;
+  --nav: #b7bcc2;
+  --button-line: #46515a;
+  --tag-text: #c5ced5;
+  --project-tag: #b4c0c9;
+  --footer: #92989e;
+  --divider: #5a6067;
+}
+
+:root[data-theme="light"] { color-scheme: light; }
 
 @media (max-width: 680px) {
   .site-shell { width: min(100% - 28px, 920px); }
@@ -132,7 +177,6 @@ footer { display: flex; justify-content: space-between; padding: 23px 0 32px; bo
   .intro-copy h1 { font-size: 32px; }
   .project-item { grid-template-columns: 1fr; gap: 15px; padding: 24px 0; }
   .media-frame { width: 100%; height: auto; aspect-ratio: 16 / 9; }
-  .news li { grid-template-columns: 80px 1fr; gap: 8px; }
   .publication-item, .experience-item { grid-template-columns: 1fr; gap: 3px; }
   footer { flex-direction: column; gap: 4px; }
 }

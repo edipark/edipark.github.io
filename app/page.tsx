@@ -1,3 +1,5 @@
+import { ThemeToggle } from "./theme-toggle";
+
 type Media =
   | { type: "image"; src: string; alt: string }
   | { type: "video"; src: string; title: string; poster?: string }
@@ -92,7 +94,7 @@ const projects: Array<{
 const interests = [
   "Robot Learning",
   "Learning-Based Control",
-  "Humanoid Locomotion",
+  "Humanoid Control",
   "Manipulation",
   "Whole-Body Control",
 ];
@@ -107,6 +109,7 @@ export default function Home() {
           <a href="#projects">Projects</a>
           <a href="#publication">Publication</a>
           <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
+          <ThemeToggle />
         </nav>
       </header>
 
@@ -119,13 +122,12 @@ export default function Home() {
           <p className="affiliation">B.E. Student, Mechanical Engineering · Yonsei University</p>
           <p>
             Hi! I am an undergraduate student in Mechanical Engineering at Yonsei University.
-            I work on learning-based control for robots, with a focus on humanoid locomotion,
+            I'm interested in learning-based control for robots, with a focus on humanoid locomotion,
             manipulation, and whole-body control.
           </p>
           <p>
             I am currently an undergraduate researcher at the Machine Learning and Control
-            Systems Laboratory, advised by Prof. Jongeun Choi. Previously, I was an intern at
-            the Dynamic Robotic Systems Laboratory at Seoul National University.
+            Systems Laboratory, advised by Prof. Jongeun Choi.
           </p>
           <div className="profile-links" aria-label="Profile links">
             <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
@@ -146,14 +148,6 @@ export default function Home() {
         <div className="interest-list">
           {interests.map((interest) => <span key={interest}>{interest}</span>)}
         </div>
-      </section>
-
-      <section className="compact-section news" aria-labelledby="news-title">
-        <h2 id="news-title">News</h2>
-        <ul>
-          <li><time>Aug. 2026</time><span>UMMA received the Grand Prize at Yonsei University&apos;s Course Outcome-based Idea Competition.</span></li>
-          <li><time>Nov. 2025</time><span>Our team placed 3rd in the STEAMCUP IRC TurtleBot3 AutoRace.</span></li>
-        </ul>
       </section>
 
       <section className="content-section" id="projects" aria-labelledby="projects-title">
@@ -219,7 +213,6 @@ export default function Home() {
 
       <footer>
         <span>© 2026 Sunghyun Park</span>
-        <span>Last updated Aug. 2026</span>
       </footer>
     </main>
   );
