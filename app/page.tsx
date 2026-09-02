@@ -122,7 +122,7 @@ export default function Home() {
           <p className="affiliation">B.E. Student, Mechanical Engineering · Yonsei University</p>
           <p>
             Hi! I am an undergraduate student in Mechanical Engineering at Yonsei University.
-            I'm interested in learning-based control for robots, with a focus on humanoid locomotion,
+            I&apos;m interested in learning-based control for robots, with a focus on humanoid locomotion,
             manipulation, and whole-body control.
           </p>
           <p>
