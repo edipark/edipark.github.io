@@ -38,7 +38,6 @@ function MediaPreview({ media }: { media: Media }) {
 
 const projects: Array<{
   title: string;
-  period: string;
   media: Media;
   description: string;
   tags: string[];
@@ -46,7 +45,6 @@ const projects: Array<{
 }> = [
   {
     title: "UMMA: University Mobile Management Agent",
-    period: "Mar. 2026 - Jun. 2026",
     media: {
       type: "youtube",
       id: "lkpkr6ZK67k",
@@ -59,7 +57,6 @@ const projects: Array<{
   },
   {
     title: "PALMA: A Robotic Hand",
-    period: "Dec. 2025 - Feb. 2026",
     media: {
       type: "youtube",
       id: "w6RC1MFLB20",
@@ -74,7 +71,6 @@ const projects: Array<{
   },
   {
     title: "DEXTRA: A Low-Cost Humanoid",
-    period: "Aug. 2025 - Jan. 2026",
     media: {
       type: "video",
       src: "/videos/dextra.mp4",
@@ -183,7 +179,6 @@ export default function Home() {
               </div>
               <div className="project-body">
                 <h3>{project.title}</h3>
-                <p className="project-period">{project.period}</p>
                 <p>{project.description}</p>
                 <p className="project-tags">{project.tags.join(" · ")}</p>
                 <div className="item-links">

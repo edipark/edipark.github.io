@@ -8,7 +8,7 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /Sunghyun Park — Robotics/);
   assert.match(html, /Selected Projects/);
   assert.match(html, /University Mobile Management Agent/);
-  assert.match(html, /State Estimation with Only Leg Observation/);
+  assert.match(html, /Joint Only State Estimation/);
   assert.match(html, /A Robotic Hand/);
   assert.match(html, /A Low-Cost Humanoid/);
   assert.match(html, /Machine Learning and Control Systems Laboratory/);
@@ -16,6 +16,6 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /youtube-nocookie\.com\/embed\/lkpkr6ZK67k/);
   assert.match(html, /youtube-nocookie\.com\/embed\/w6RC1MFLB20/);
   assert.match(html, /disablekb=1/);
-  assert.match(html, /SOLO state estimation project cover/);
+  assert.match(html, /JOSE main figure/);
   assert.doesNotMatch(html, /Designer &amp; Developer|hello@example|Research Interface/);
 });

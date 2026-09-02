@@ -117,7 +117,7 @@ section { scroll-margin-top: 20px; }
 .media-frame iframe { pointer-events: none; }
 .project-body h3, .publication-item h3, .experience-item h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.35; }
 .project-body p { margin: 5px 0 0; }
-.project-period, .venue { color: var(--muted); font-size: 13px; }
+.venue { color: var(--muted); font-size: 13px; }
 .project-tags { color: var(--project-tag); font-size: 13px; }
 .item-links { display: flex; gap: 7px; margin-top: 11px; }
 
