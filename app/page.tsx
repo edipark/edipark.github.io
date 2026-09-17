@@ -144,11 +144,11 @@ export default function Home() {
             />
           </div>
           <div className="publication-body">
-            <div className="publication-year">2026</div>
-            <h3>JOSE: Joint Only State Estimation
-                  for Whole-Body Control without an Inertial Unit</h3>
-            <p>Hyeonjung Kim, <strong>Sunghyun Park</strong>, and Hyungjun Jeon</p>
-            <p className="venue">Working paper, in preparation.</p>
+            <div className="publication-year">2027</div>
+            <h3>JOSE: Reconstructing Privileged State from Joint History
+                  for Humanoid Motion Control</h3>
+            <p><strong>Sunghyun Park</strong>, Hyeonjung Kim</p>
+            <p className="venue">Submitted to ICRA 2027. Under review.</p>
             <div className="item-links">
               <a href="https://github.com/edipark/SOLO" target="_blank" rel="noreferrer">Code</a>
             </div>
