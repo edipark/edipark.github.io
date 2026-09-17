@@ -150,7 +150,7 @@ export default function Home() {
             <p><strong>Sunghyun Park</strong>, Hyeonjung Kim</p>
             <p className="venue">Submitted to ICRA 2027. Under review.</p>
             <div className="item-links">
-              <a href="https://github.com/edipark/SOLO" target="_blank" rel="noreferrer">Code</a>
+              <a href="https://github.com/edipark/jose-humanoid" target="_blank" rel="noreferrer">Code</a>
             </div>
           </div>
         </article>
