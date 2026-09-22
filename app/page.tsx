@@ -38,34 +38,34 @@ const projects: Array<{
       title: "UMMA project demonstration",
     },
     description:
-      "An autonomous building management robot integrating mobile manipulation, perception, and navigation.",
-    tags: ["ROS 2", "YOLO", "SLAM", "Hardware Design"],
+      "Built the robot's control and task-execution stack in ROS2 for an autonomous building management system.",
+    tags: ["ROS2", "YOLO", "SLAM", "Hardware Design"],
     links: [{ label: "Project", href: "https://umma-yonsei.github.io/" }],
   },
   {
-    title: "PALMA: A Robotic Hand",
+    title: "PALMA: A Robotic Hand Project",
     media: {
       type: "video",
       src: "/videos/palma.mp4",
       title: "PALMA project demonstration",
     },
     description:
-      "A tendon-actuated robotic hand built from scratch with vision-based teleoperation.",
-    tags: ["Computer Vision", "Teleoperation", "Tendon Actuation"],
+      "Fabricated every part in-house by 3D printing and assembled a fully tendon-driven hand with vision-based teleoperation.",
+    tags: ["Computer Vision", "Tendon Actuation"],
     links: [
       { label: "Code", href: "https://github.com/edipark/PALMA_teleop" },
     ],
   },
   {
-    title: "DEXTRA: A Low-Cost Humanoid",
+    title: "DEXTRA: A Low-Cost Bipedal Robot",
     media: {
       type: "video",
       src: "/videos/dextra.mp4",
       title: "DEXTRA motion imitation GitHub project cover",
     },
     description:
-      "A low-cost humanoid designed, fabricated, and trained for bipedal walking through motion imitation.",
-    tags: ["Humanoid", "Motion Retargeting", "Isaac Gym"],
+      "Designed, printed, and assembled a 12-DoF bipedal robot from scratch for under $800 in parts, trained to walk via DeepMimic-based motion imitation.",
+    tags: ["Motion Retargeting", "RL"],
     links: [
       { label: "Code", href: "https://github.com/edipark/Mimickit_Dextra" },
       { label: "Hardware", href: "https://github.com/edipark/DEXTRA" },
@@ -90,7 +90,7 @@ export default function Home() {
           <a className="active" href="#home">Home</a>
           <a href="#publication">Publication</a>
           <a href="#projects">Projects</a>
-          <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
+          <a href="/cv.pdf" target="_blank" rel="noreferrer">CV</a>
           <ThemeToggle />
         </nav>
       </header>
@@ -118,7 +118,7 @@ export default function Home() {
             , advised by Prof. Jongeun Choi.
           </p>
           <div className="profile-links" aria-label="Profile links">
-            <a href="/CurriculumVitae.pdf" target="_blank" rel="noreferrer">CV</a>
+            <a href="/cv.pdf" target="_blank" rel="noreferrer">CV</a>
             <a href="https://github.com/edipark" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/sunghyun-park-a141bb332/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.youtube.com/@SunghyunPark-l3u" target="_blank" rel="noreferrer">YouTube</a>
@@ -150,6 +150,7 @@ export default function Home() {
             <p><strong>Sunghyun Park</strong>, Hyeonjung Kim</p>
             <p className="venue">Submitted to ICRA 2027. Under review.</p>
             <div className="item-links">
+              <a href="https://edipark.github.io/jose-humanoid/" target="_blank" rel="noreferrer">Project</a>
               <a href="https://github.com/edipark/jose-humanoid" target="_blank" rel="noreferrer">Code</a>
             </div>
           </div>

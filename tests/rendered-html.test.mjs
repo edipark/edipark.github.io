@@ -10,9 +10,9 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /University Mobile Management Agent/);
   assert.match(html, /Reconstructing Privileged State from Joint History/);
   assert.match(html, /A Robotic Hand/);
-  assert.match(html, /A Low-Cost Humanoid/);
+  assert.match(html, /A Low-Cost Bipedal Robot/);
   assert.match(html, /Machine Learning and Control Systems Laboratory/);
-  assert.match(html, /href="\/CurriculumVitae\.pdf"/);
+  assert.match(html, /href="\/cv\.pdf"/);
   assert.match(html, /src="\/videos\/umma\.mp4"/);
   assert.match(html, /src="\/videos\/palma\.mp4"/);
   assert.match(html, /src="\/videos\/dextra\.mp4"/);
