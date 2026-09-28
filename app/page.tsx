@@ -138,28 +138,6 @@ export default function Home() {
             <MediaPreview
               media={{
                 type: "image",
-                src: "/images/JOSE_fig.png",
-                alt: "JOSE main figure",
-              }}
-            />
-          </div>
-          <div className="publication-body">
-            <div className="publication-year">2026</div>
-            <h3>JOSE: Reconstructing Privileged State from Joint History
-                  for Humanoid Motion Control</h3>
-            <p><strong>Sunghyun Park</strong>, Hyeonjung Kim</p>
-            <p className="venue">Submitted to ICRA 2027. Under review.</p>
-            <div className="item-links">
-              <a href="https://edipark.github.io/jose-humanoid/" target="_blank" rel="noreferrer">Project</a>
-              <a href="https://github.com/edipark/jose-humanoid" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </div>
-        </article>
-        <article className="publication-item">
-          <div className="media-frame">
-            <MediaPreview
-              media={{
-                type: "image",
                 src: "/images/cohub.jpg",
                 alt: "CoHuB multi-humanoid collaboration benchmark",
               }}
@@ -177,6 +155,28 @@ export default function Home() {
             <p className="venue">Submitted to ICLR 2027. Under review.</p>
             <div className="item-links">
               <a href="https://meat124.github.io/CoHuB/" target="_blank" rel="noreferrer">Project</a>
+            </div>
+          </div>
+        </article>
+        <article className="publication-item">
+          <div className="media-frame">
+            <MediaPreview
+              media={{
+                type: "image",
+                src: "/images/JOSE_fig.png",
+                alt: "JOSE main figure",
+              }}
+            />
+          </div>
+          <div className="publication-body">
+            <div className="publication-year">2026</div>
+            <h3>JOSE: Reconstructing Privileged State from Joint History
+                  for Humanoid Motion Control</h3>
+            <p><strong>Sunghyun Park</strong>, Hyeonjung Kim</p>
+            <p className="venue">Submitted to ICRA 2027. Under review.</p>
+            <div className="item-links">
+              <a href="https://edipark.github.io/jose-humanoid/" target="_blank" rel="noreferrer">Project</a>
+              <a href="https://github.com/edipark/jose-humanoid" target="_blank" rel="noreferrer">Code</a>
             </div>
           </div>
         </article>
