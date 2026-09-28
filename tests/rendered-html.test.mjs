@@ -10,6 +10,8 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /University Mobile Management Agent/);
   assert.match(html, /Reconstructing Privileged State from Joint History/);
   assert.match(html, /CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration/);
+  assert.match(html, /Submitted to ICLR 2027\. Under review\./);
+  assert.match(html, /Co-first authors\./);
   assert.match(html, /A Robotic Hand/);
   assert.match(html, /A Low-Cost Bipedal Robot/);
   assert.match(html, /Machine Learning and Control Systems Laboratory/);

@@ -144,7 +144,7 @@ export default function Home() {
             />
           </div>
           <div className="publication-body">
-            <div className="publication-year">2027</div>
+            <div className="publication-year">2026</div>
             <h3>JOSE: Reconstructing Privileged State from Joint History
                   for Humanoid Motion Control</h3>
             <p><strong>Sunghyun Park</strong>, Hyeonjung Kim</p>
@@ -169,11 +169,12 @@ export default function Home() {
             <div className="publication-year">2026</div>
             <h3>CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration</h3>
             <p>
-              Hyunjin Park, Jebeom Chae, Minwoo Park, <strong>Sunghyun Park</strong>, Hanjun Yoo,
-              Seoyeon Choi, Soochul Yoo, Joohwan Seo, Sarmad Idrees, Jae-Sang Hyun, Jongmin Lee,
-              Roberto Horowitz, Youngwoon Lee, Jongeun Choi
+              Hyunjin Park<sup>*</sup>, Jebeom Chae<sup>*</sup>, Minwoo Park<sup>*</sup>,{" "}
+              <strong>Sunghyun Park</strong>, Hanjun Yoo, Seoyeon Choi, Soochul Yoo, Joohwan Seo,
+              Sarmad Idrees, Jae-Sang Hyun, Jongmin Lee, Roberto Horowitz, Youngwoon Lee, Jongeun Choi
             </p>
-            <p className="venue">Under review.</p>
+            <p className="venue"><sup>*</sup> Co-first authors.</p>
+            <p className="venue">Submitted to ICLR 2027. Under review.</p>
             <div className="item-links">
               <a href="https://meat124.github.io/CoHuB/" target="_blank" rel="noreferrer">Project</a>
             </div>
