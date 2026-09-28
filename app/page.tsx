@@ -155,6 +155,30 @@ export default function Home() {
             </div>
           </div>
         </article>
+        <article className="publication-item">
+          <div className="media-frame">
+            <MediaPreview
+              media={{
+                type: "image",
+                src: "/images/cohub.jpg",
+                alt: "CoHuB multi-humanoid collaboration benchmark",
+              }}
+            />
+          </div>
+          <div className="publication-body">
+            <div className="publication-year">2026</div>
+            <h3>CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration</h3>
+            <p>
+              Hyunjin Park, Jebeom Chae, Minwoo Park, <strong>Sunghyun Park</strong>, Hanjun Yoo,
+              Seoyeon Choi, Soochul Yoo, Joohwan Seo, Sarmad Idrees, Jae-Sang Hyun, Jongmin Lee,
+              Roberto Horowitz, Youngwoon Lee, Jongeun Choi
+            </p>
+            <p className="venue">Under review.</p>
+            <div className="item-links">
+              <a href="https://meat124.github.io/CoHuB/" target="_blank" rel="noreferrer">Project</a>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section className="content-section" id="projects" aria-labelledby="projects-title">
