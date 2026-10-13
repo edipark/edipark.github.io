@@ -152,7 +152,7 @@ export default function Home() {
               Sarmad Idrees, Jae-Sang Hyun, Jongmin Lee, Roberto Horowitz, Youngwoon Lee, Jongeun Choi
             </p>
             <p className="venue"><sup>*</sup> Co-first authors.</p>
-            <p className="venue">Submitted to ICLR 2027. Under review.</p>
+            <p className="venue"><strong>Accepted to NeurIPS 2026 Robot Learning Workshop.</strong> Under review for ICLR 2027.</p>
             <div className="item-links">
               <a href="https://meat124.github.io/CoHuB/" target="_blank" rel="noreferrer">Project</a>
             </div>
