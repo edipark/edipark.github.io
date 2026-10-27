@@ -11,7 +11,8 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /Reconstructing Privileged State from Joint History/);
   assert.match(html, /CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration/);
   assert.ok(html.indexOf("CoHuB: A Simulation Benchmark") < html.indexOf("JOSE: Reconstructing"));
-  assert.match(html, /Submitted to ICLR 2027\. Under review\./);
+  assert.match(html, /Accepted to NeurIPS 2026 Robot Learning Workshop\./);
+  assert.match(html, /Under review for ICLR 2027\./);
   assert.match(html, /Co-first authors\./);
   assert.match(html, /A Robotic Hand/);
   assert.match(html, /A Low-Cost Bipedal Robot/);

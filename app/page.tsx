@@ -1,4 +1,5 @@
 import { ThemeToggle } from "./theme-toggle";
+import { PublicationImage } from "./publication-image";
 
 type Media =
   | { type: "image"; src: string; alt: string }
@@ -134,15 +135,7 @@ export default function Home() {
       <section className="content-section" id="publication" aria-labelledby="publication-title">
         <h2 id="publication-title">Publication & Working Paper</h2>
         <article className="publication-item">
-          <div className="media-frame">
-            <MediaPreview
-              media={{
-                type: "image",
-                src: "/images/cohub.jpg",
-                alt: "CoHuB multi-humanoid collaboration benchmark",
-              }}
-            />
-          </div>
+          <PublicationImage src="/images/cohub.jpg" alt="CoHuB multi-humanoid collaboration benchmark" />
           <div className="publication-body">
             <div className="publication-year">2026</div>
             <h3>CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration</h3>
@@ -159,15 +152,7 @@ export default function Home() {
           </div>
         </article>
         <article className="publication-item">
-          <div className="media-frame">
-            <MediaPreview
-              media={{
-                type: "image",
-                src: "/images/JOSE_fig.png",
-                alt: "JOSE main figure",
-              }}
-            />
-          </div>
+          <PublicationImage src="/images/JOSE_fig.png" alt="JOSE main figure" />
           <div className="publication-body">
             <div className="publication-year">2026</div>
             <h3>JOSE: Reconstructing Privileged State from Joint History
@@ -208,12 +193,14 @@ export default function Home() {
       <section className="content-section experience" aria-labelledby="experience-title">
         <h2 id="experience-title">Research Experience</h2>
         <div className="experience-item">
+          <div className="institution-logo"><img src="/images/yonsei-logo.png" alt="Yonsei University logo" width="64" height="64" /></div>
+          <div className="experience-details"><h3><a href="https://mlcs.yonsei.ac.kr/" target="_blank" rel="noreferrer">Machine Learning and Control Systems Laboratory</a></h3><p>Undergraduate Researcher · Yonsei University</p></div>
           <time>Nov. 2025 - Present</time>
-          <div><h3><a href="https://mlcs.yonsei.ac.kr/" target="_blank" rel="noreferrer">Machine Learning and Control Systems Laboratory</a></h3><p>Undergraduate Researcher · Yonsei University</p></div>
         </div>
         <div className="experience-item">
+          <div className="institution-logo"><img src="/images/snu-logo.png" alt="Seoul National University logo" width="64" height="64" /></div>
+          <div className="experience-details"><h3>Dynamic Robotic Systems Laboratory</h3><p>Undergraduate Intern · Seoul National University</p></div>
           <time>Jul. 2025 - Sep. 2025</time>
-          <div><h3>Dynamic Robotic Systems Laboratory</h3><p>Undergraduate Intern · Seoul National University</p></div>
         </div>
       </section>
 
