@@ -4,7 +4,7 @@
   "cssSha256": "a5d61a604c1d6ceee7ef3ca7cb98a24d3bc236886581cd4e711243058e074f17",
   "sourceCssSha256": "d844a86c049585a8d251d12f525db7bd055fedbd23bc002ea63090ec5b4c57a2",
   "assets": {
-    "/cv.pdf": "c2c8330dd123611ecb012d3b8cece9c5f62ad4eaa113015969df4c5674ef926c",
+    "/cv.pdf": "6dd7a42225a41bf2e0ddf6301a2f251dfd205edd2292ce7247af28d38a031b72",
     "/images/JOSE_fig.png": "7c936a3d64cf41b29f1ce21e0408aa8ed7062120871fa45d5c8a4ef9a2e460c8",
     "/images/cohub.jpg": "212439b277c82ab9f0452e3e2a39ba66b24477f0b049971924d92707d2e007a7",
     "/images/profile.jpg": "c2157e6b85ef8370bb2c9e0771f2cb1fe3136c9a3b550bf0a34f6f16695dac1d",
@@ -18,5 +18,13 @@
     "app/theme-toggle.tsx": "f0050ad1cd54b7ce14f618d3ac401a7795e6400a8c23d6594407ee3f89a57af6",
     "app/publication-image.tsx": "1ee491d9ab9da4044167fd88932776254b88d54afbcef43007f8307482e6ad93",
     "app/layout.tsx": "7e5b04b890381b390d4390632a94cf2e9cc7143a8c0ff2e35d2f0d8bca1e4037"
-  }
+  },
+  "authorizedAssetUpdates": [
+    {
+      "path": "/cv.pdf",
+      "date": "2026-11-03",
+      "reason": "Add the UMMA General Division Top Excellence Award and its news source, as requested.",
+      "previousSha256": "c2c8330dd123611ecb012d3b8cece9c5f62ad4eaa113015969df4c5674ef926c"
+    }
+  ]
 }
