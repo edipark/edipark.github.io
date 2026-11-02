@@ -1,86 +1,6 @@
 import { ThemeToggle } from "./theme-toggle";
 import { PublicationImage } from "./publication-image";
-
-type Media =
-  | { type: "image"; src: string; alt: string }
-  | { type: "video"; src: string; title: string; poster?: string };
-
-function MediaPreview({ media }: { media: Media }) {
-  if (media.type === "video") {
-    return (
-      <video
-        src={media.src}
-        poster={media.poster}
-        aria-label={media.title}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      />
-    );
-  }
-
-  return <img src={media.src} alt={media.alt} />;
-}
-
-const projects: Array<{
-  title: string;
-  media: Media;
-  description: string;
-  tags: string[];
-  links: Array<{ label: string; href: string }>;
-}> = [
-  {
-    title: "UMMA: University Mobile Management Agent",
-    media: {
-      type: "video",
-      src: "/videos/umma.mp4",
-      title: "UMMA project demonstration",
-    },
-    description:
-      "Built the robot's control and task-execution stack in ROS2 for an autonomous building management system.",
-    tags: ["ROS2", "YOLO", "SLAM", "Hardware Design"],
-    links: [{ label: "Project", href: "https://umma-yonsei.github.io/" }],
-  },
-  {
-    title: "PALMA: A Robotic Hand Project",
-    media: {
-      type: "video",
-      src: "/videos/palma.mp4",
-      title: "PALMA project demonstration",
-    },
-    description:
-      "Fabricated every part in-house by 3D printing and assembled a fully tendon-driven hand with vision-based teleoperation.",
-    tags: ["Computer Vision", "Tendon Actuation"],
-    links: [
-      { label: "Code", href: "https://github.com/edipark/PALMA_teleop" },
-    ],
-  },
-  {
-    title: "DEXTRA: A Low-Cost Bipedal Robot",
-    media: {
-      type: "video",
-      src: "/videos/dextra.mp4",
-      title: "DEXTRA motion imitation GitHub project cover",
-    },
-    description:
-      "Designed, printed, and assembled a 12-DoF bipedal robot from scratch for under $800 in parts, trained to walk via DeepMimic-based motion imitation.",
-    tags: ["Motion Retargeting", "RL"],
-    links: [
-      { label: "Code", href: "https://github.com/edipark/Mimickit_Dextra" },
-      { label: "Hardware", href: "https://github.com/edipark/DEXTRA" },
-    ],
-  },
-];
-
-const interests = [
-  "Robot Learning",
-  "Learning-Based Control",
-  "Humanoid Control",
-  "Manipulation",
-  "Whole-Body Control",
-];
+import { interests, projects } from "./portfolio-data";
 
 export default function Home() {
   return (
@@ -173,7 +93,15 @@ export default function Home() {
           {projects.map((project) => (
             <article className="project-item" key={project.title}>
               <div className="media-frame">
-                <MediaPreview media={project.media} />
+                <video
+                  src={project.media.src}
+                  aria-label={project.media.title}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
               </div>
               <div className="project-body">
                 <h3>{project.title}</h3>

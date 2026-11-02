@@ -5,12 +5,16 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+  {
+    rules: {
+      // GitHub Pages serves these local assets directly; no image optimizer runs.
+      "@next/next/no-img-element": "off",
+    },
+  },
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
-    "build/**",
+    "dist/**",
     "next-env.d.ts",
   ]),
 ]);
