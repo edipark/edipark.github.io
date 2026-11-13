@@ -13,6 +13,8 @@ test("static export contains the academic portfolio", async () => {
   assert.ok(html.indexOf("CoHuB: A Simulation Benchmark") < html.indexOf("JOSE: Reconstructing"));
   assert.match(html, /Accepted to NeurIPS 2026 Robot Learning Workshop\./);
   assert.match(html, /Under review for ICLR 2027\./);
+  assert.match(html, /Accepted to IEEE RAS Humanoids 2026 Workshop on Trustworthy Humanoid Systems\./);
+  assert.match(html, /Under review for ICRA 2027\./);
   assert.match(html, /Co-first authors\./);
   assert.match(html, /A Robotic Hand/);
   assert.match(html, /A Low-Cost Bipedal Robot/);
