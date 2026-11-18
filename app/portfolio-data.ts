@@ -47,10 +47,10 @@ export const projects: Array<{
 
 export const interests = [
   "Robot Learning",
-  "Learning-Based Control",
-  "Humanoid Control",
-  "Manipulation",
-  "Whole-Body Control",
+  "Policy Adaptation",
+  "Robot Foundation Models",
+  "Embodied AI",
+  "Humanoid Robotics",
 ];
 
 export const news: Array<{ date: string; text: string }> = [
