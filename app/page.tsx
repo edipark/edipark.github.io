@@ -1,6 +1,6 @@
 import { ThemeToggle } from "./theme-toggle";
 import { PublicationImage } from "./publication-image";
-import { interests, projects } from "./portfolio-data";
+import { interests, news, projects } from "./portfolio-data";
 
 export default function Home() {
   return (
@@ -50,6 +50,18 @@ export default function Home() {
             <span>Robotics · Control · AI</span>
           </p>
         </div>
+      </section>
+
+      <section className="content-section" id="news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <ul className="news-list">
+          {news.map((item) => (
+            <li key={item.text}>
+              <time>{item.date}</time>
+              <span>{item.text}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="content-section" id="publication" aria-labelledby="publication-title">

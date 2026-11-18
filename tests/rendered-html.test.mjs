@@ -16,6 +16,8 @@ test("static export contains the academic portfolio", async () => {
   assert.match(html, /Accepted to IEEE RAS Humanoids 2026 Workshop on Trustworthy Humanoid Systems\./);
   assert.match(html, /Under review for ICRA 2027\./);
   assert.match(html, /Co-first authors\./);
+  assert.ok(html.indexOf('id="news"') < html.indexOf('id="publication"'));
+  assert.ok(html.indexOf("JOSE accepted as a poster") < html.indexOf("CoHuB accepted to the NeurIPS"));
   assert.match(html, /A Robotic Hand/);
   assert.match(html, /A Low-Cost Bipedal Robot/);
   assert.match(html, /Machine Learning and Control Systems Laboratory/);

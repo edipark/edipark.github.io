@@ -120,6 +120,10 @@ section { scroll-margin-top: 20px; }
 .project-tags { color: var(--project-tag); font-size: 13px; }
 .item-links { display: flex; gap: 7px; margin-top: 11px; }
 
+.news-list { margin: 0; padding: 0; list-style: none; }
+.news-list li { display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 4px 0; }
+.news-list time { color: var(--muted); font-size: 14px; font-weight: 600; }
+
 .publication-item { display: grid; grid-template-columns: 230px 1fr; gap: 25px; padding: 5px 0 22px; }
 .publication-year { color: var(--muted); font-size: 14px; font-weight: 600; }
 .publication-item p { margin: 5px 0 0; }
@@ -197,6 +201,7 @@ footer { display: flex; justify-content: space-between; padding: 23px 0 32px; bo
   .project-item { grid-template-columns: 1fr; gap: 15px; padding: 24px 0; }
   .media-frame { width: 100%; height: auto; aspect-ratio: 16 / 9; }
   .publication-item { grid-template-columns: 1fr; gap: 12px; }
+  .news-list li { grid-template-columns: 1fr; gap: 0; padding: 6px 0; }
   .experience-item { grid-template-columns: 60px minmax(0, 1fr); gap: 6px 14px; }
   .experience-item time { grid-column: 2; grid-row: 1; }
   .institution-logo { grid-column: 1; grid-row: span 2; grid-row-start: 1; width: 60px; height: 60px; }

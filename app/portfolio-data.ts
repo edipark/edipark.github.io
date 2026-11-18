@@ -52,3 +52,14 @@ export const interests = [
   "Manipulation",
   "Whole-Body Control",
 ];
+
+export const news: Array<{ date: string; text: string }> = [
+  {
+    date: "Nov. 2026",
+    text: "JOSE accepted as a poster to the IEEE RAS Humanoids 2026 Workshop on Trustworthy Humanoid Systems.",
+  },
+  {
+    date: "Oct. 2026",
+    text: "CoHuB accepted to the NeurIPS 2026 Robot Learning Workshop.",
+  },
+];
