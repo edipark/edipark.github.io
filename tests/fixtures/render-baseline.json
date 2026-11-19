@@ -4,7 +4,7 @@
   "cssSha256": "2cbf4eb65ffb3cc100db6efc2511b2e53a01bc5ca0303fae1b8e65a023f9374e",
   "sourceCssSha256": "601877ee2b2221675a4566aa466db80588b1a16691e6bdbdc00faf9676a6b389",
   "assets": {
-    "/cv.pdf": "b701d12df1ad97e7c91fa16a0b9a87ec5969b3101f195519a375ea146fd3ac60",
+    "/cv.pdf": "404b08bf922b84ad2395cbdcd7e3959b3c8322977ed5d6ee87f6fdfa83a618c5",
     "/images/JOSE_fig.png": "7c936a3d64cf41b29f1ce21e0408aa8ed7062120871fa45d5c8a4ef9a2e460c8",
     "/images/cohub.jpg": "212439b277c82ab9f0452e3e2a39ba66b24477f0b049971924d92707d2e007a7",
     "/images/profile.jpg": "c2157e6b85ef8370bb2c9e0771f2cb1fe3136c9a3b550bf0a34f6f16695dac1d",
@@ -37,6 +37,12 @@
       "date": "2026-11-18",
       "reason": "Replace Research Interest with Robot Learning, Policy Adaptation, Robot Foundation Models, Embodied AI, Humanoid Robotics.",
       "previousSha256": "21453ca11233a11fcccf7830263524e2094f9fd52883c82c2879f8ba48494f34"
+    },
+    {
+      "path": "/cv.pdf",
+      "date": "2026-11-19",
+      "reason": "Remove the \"Last updated\" footer from the CV.",
+      "previousSha256": "b701d12df1ad97e7c91fa16a0b9a87ec5969b3101f195519a375ea146fd3ac60"
     }
   ],
   "authorizedContentUpdates": [
